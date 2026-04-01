@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #002D62;
+    --secondary-color: #64748b;
+    --accent-color: #b89f5d;
+    --text-dark: #1a1a1a;
+    --bg-light: #fdfdfd;
+    --spacing: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    padding-top: 80px;
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-family: 'Libre+Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-small {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    background: var(--accent-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+img[alt="card-picture"] {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 2rem;
+
+}
+
+
+
+.introduction {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.introduction h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.introduction h2 {
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.introduction h3 {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-color);
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skills li {
+    background: #f8fafc;
+    padding: 1rem;
+    border-left: 3px solid var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.experiences li,
+.education li {
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.experiences li::first-line,
+.education li::first-line {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.contact ul,
+.references ul {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.references li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .introduction h1 {
+        font-size: 2.5rem;
+    }
+}
